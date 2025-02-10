@@ -30,6 +30,7 @@ class Disabilities(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_requests', null=False)
     moderator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='moderator_requests')
     date_dilivery = models.DateField(null=True, blank=True)
+    qr = models.TextField(null=True, blank=True)
     class Meta:
         managed = True
         db_table = 'Disabilities'
